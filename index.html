@@ -146,6 +146,17 @@ var render = function () {
 render();
 
 
+// Create an event listener that resizes the renderer with the browser window.
+// via http://blog.teamtreehouse.com/the-beginners-guide-to-three-js
+window.addEventListener('resize', function() {
+	var WIDTH = window.innerWidth;
+	var HEIGHT = window.innerHeight;
+	renderer.setSize(WIDTH, HEIGHT);
+	camera.aspect = WIDTH / HEIGHT;
+	camera.updateProjectionMatrix();
+});
+
+
 
 
 </script>
